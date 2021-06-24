@@ -23,9 +23,18 @@ public class Tyabasira_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        //if (Input.anyKeyDown) Test_move();
 
+        transform.rotation = Quaternion.EulerAngles(TargetAngleX,0,TargetAngleZ);
+    }
+    private void Test_move()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1)) MoveForce(1);
+        if (Input.GetKeyDown(KeyCode.Alpha2)) MoveForce(2);
+        if (Input.GetKeyDown(KeyCode.Alpha3)) MoveForce(3);
+        if (Input.GetKeyDown(KeyCode.Alpha4)) MoveForce(4);
+
+    }
     public void MoveForce(int n)//場所１～４
     {
         if (n<1||n>4)
