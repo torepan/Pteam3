@@ -28,6 +28,11 @@ public class Tyabasira_Script : MonoBehaviour
 
     public void MoveForce(int n)//場所１～４
     {
+        if (n<1||n>4)
+        {
+            Debug.Log("範囲外の数字で呼ばれました。n:"+n);
+            return ;
+        }
         Debug.Log("MoveForce呼び出され："+n);
 
         switch (n)
