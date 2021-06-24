@@ -23,4 +23,9 @@ public class PlayerAction_Script : MonoBehaviour
     {
         Tyabasira_.MoveForce(n);//PUN2の関係で最初から切り出す
     }
+
+    void moveTyaba()//移動なしで押された際にはこいつを呼ぶ
+    {
+
+    }
 }
