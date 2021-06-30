@@ -28,7 +28,7 @@ public class Tyabasira_Script : MonoBehaviour
     void Update()
     {
         if (Input.anyKeyDown) Test_move();
-        transform.rotation = Quaternion.Slerp(transform.rotation,Target_q,move_t);
+        transform.rotation = Quaternion.Slerp(transform.rotation,Target_q,Time.deltaTime);//小さめの値として採用。変更必須
         //transform.rotation = Quaternion.Euler(TargetAngleX,0,TargetAngleZ);
         //transform.rotation = Quaternion.Slerp(this.transform.rotation,rot,1f);
         move_t += Time.deltaTime;
