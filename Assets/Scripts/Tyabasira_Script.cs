@@ -7,9 +7,11 @@ public class Tyabasira_Script : MonoBehaviour
     public float angleX { private set; get; }
     public float angleZ { private set; get; }
     Rigidbody rb;
-    [SerializeField] float dAngle = 5;
+    [SerializeField] float dAngle;
     private float TargetAngleX;//こいつに向かって回転
     private float TargetAngleZ;
+    Quaternion Target_q;
+    float move_t;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,14 +20,18 @@ public class Tyabasira_Script : MonoBehaviour
         angleZ = transform.eulerAngles.z;
         TargetAngleX = angleX;
         TargetAngleZ = angleZ;
+        Target_q = transform.rotation;
+        move_t = 0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.anyKeyDown) Test_move();
-
-        transform.rotation = Quaternion.EulerAngles(TargetAngleX,0,TargetAngleZ);
+        if (Input.anyKeyDown) Test_move();
+        transform.rotation = Quaternion.Slerp(transform.rotation,Target_q,move_t);
+        //transform.rotation = Quaternion.Euler(TargetAngleX,0,TargetAngleZ);
+        //transform.rotation = Quaternion.Slerp(this.transform.rotation,rot,1f);
+        move_t += Time.deltaTime;
     }
     private void Test_move()
     {
@@ -60,6 +66,9 @@ public class Tyabasira_Script : MonoBehaviour
                 break;
 
         }
-
+        Debug.Log("TargetX:"+TargetAngleX);
+        Debug.Log("TargetZ:" + TargetAngleZ);
+        
+        Target_q = Quaternion.Euler(TargetAngleX, 0, TargetAngleZ);
     }
 }
