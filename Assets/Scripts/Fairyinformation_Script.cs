@@ -19,7 +19,9 @@ public class Fairyinformation_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //次の移動までの時間を計測
         montionTime+= Time.deltaTime;
+        //canPushがtrueなら
         if(canPush==true){
         //テスト用のコード
         //スペースキーを押すとtestPlaceの値が増えてplaceの値が変わる
@@ -29,6 +31,7 @@ public class Fairyinformation_Script : MonoBehaviour
             Debug.Log(place);
         }
         }else{
+        //ここでintervalよりmontionTimeの数値が大きいと
         if(montionTime>=interval){
         Debug.Log("準備");
         canPushTime();
@@ -36,6 +39,7 @@ public class Fairyinformation_Script : MonoBehaviour
         }
     }
 
+    //受け取った引数をplaceに入れて、canPushをfalseに
     public void MoveReceive(int n){
             place=n;
             canPush=false;
@@ -43,6 +47,7 @@ public class Fairyinformation_Script : MonoBehaviour
             Debug.Log(canPush);
         }
 
+        //canPushTimeはcanPushをtrueにするだけ
         void canPushTime(){
             Debug.Log("動ける");
             montionTime=0;
