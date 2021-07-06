@@ -28,27 +28,25 @@ public class Fairyinformation_Script : MonoBehaviour
             MoveReceive(testPlace);
             Debug.Log(place);
         }
+        }else{
+        if(montionTime>=interval){
+        Debug.Log("準備");
+        canPushTime();
+        }
         }
     }
 
     public void MoveReceive(int n){
             place=n;
             canPush=false;
+            montionTime=0;
             Debug.Log(canPush);
-            canPushTime();
         }
 
         void canPushTime(){
-            while(montionTime<interval){
-                montionTime+= Time.deltaTime;
-                //Debug.Log(montionTime);
-            }
-
-            //if(montionTime>=interval){
             Debug.Log("動ける");
             montionTime=0;
             canPush=true;
             Debug.Log(canPush);
-            //}
         }
 }
