@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Fairyinformation_Script : MonoBehaviour
 {
-    int place; //場所
-    bool canPush=true; //移動中や準備中なら押せない
+    public int place; //場所
+    public bool canPush=true; //移動中や準備中なら押せない
     float montionTime; //移動にかかる時間を計る
     [SerializeField]
     float interval=5;//移動時間
