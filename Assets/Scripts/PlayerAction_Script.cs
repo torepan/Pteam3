@@ -25,12 +25,12 @@ public class PlayerAction_Script : MonoBehaviour
         Finfo_.MoveReceive(n);
     }
 
-    void moveTyaba(int n)
+    public void moveTyaba(int n)
     {
         Tyabasira_.MoveForce(n);//PUN2の関係で最初から切り出す
     }
 
-    void moveTyaba()//移動なしで押された際にはこいつを呼ぶ
+    public void moveTyaba()//移動なしで押された際にはこいつを呼ぶ
     {
         moveTyaba(nowPlace);
     }
