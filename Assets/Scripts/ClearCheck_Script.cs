@@ -31,7 +31,7 @@ public class ClearCheck_Script: MonoBehaviour
         if (!isFin)
         {
             if (timeCount <= timeLimit) timeCount += Time.deltaTime;
-            else calcRank();
+            else CalcRank();
         }
         
     }

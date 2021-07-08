@@ -529,4 +529,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tyabasira_: {fileID: 0}
-  rank: 0000000000000000000000000000000000000000
+  timeLimit: 10
+  rankThreshold: 00000000000000000000000000000000
