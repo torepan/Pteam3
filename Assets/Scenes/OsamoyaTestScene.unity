@@ -246,6 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b8ca0f19aaadf84f910e982464fa207, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dAngle: 0
 --- !u!1 &1576375326
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +443,7 @@ GameObject:
   - component: {fileID: 1949336937}
   - component: {fileID: 1949336936}
   - component: {fileID: 1949336935}
+  - component: {fileID: 1949336938}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -514,3 +516,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1949336938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949336934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dba75af20618da74ab23c87b170fbe4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tyabasira_: {fileID: 0}
+  timeLimit: 10
+  rankThreshold: 00000000000000000000000000000000

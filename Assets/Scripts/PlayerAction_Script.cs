@@ -5,18 +5,24 @@ using UnityEngine;
 public class PlayerAction_Script : MonoBehaviour
 {
     [SerializeField] Tyabasira_Script Tyabasira_;
+    [SerializeField] Fairyinformation_Script Finfo_;
     //[SerializeField] YOUSEI sousei;
+    int nowPlace=0;
     public void OnClickDo(int n)
     {
-        if (!true/*yousei.CanPush*/) return;
+        if (Finfo_.canPush) return;//押せないなら終了
 
-        if (n != 1) moveChar(n);
-        if (n == 1) moveTyaba(n);
+        if (n != Finfo_.place)
+        {
+            moveChar(n);
+            nowPlace = Finfo_.place;
+        }
+        if (n == Finfo_.place) moveTyaba(n);
     }
 
     void moveChar(int n)
     {
-
+        Finfo_.MoveReceive(n);
     }
 
     void moveTyaba(int n)
@@ -26,6 +32,6 @@ public class PlayerAction_Script : MonoBehaviour
 
     void moveTyaba()//移動なしで押された際にはこいつを呼ぶ
     {
-
+        moveTyaba(nowPlace);
     }
 }
