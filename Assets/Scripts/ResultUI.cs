@@ -20,7 +20,7 @@ public class ResultUI : MonoBehaviour
 
     void Update()
     {
-        Invoke("WardResult", 3f);
+        Invoke("WardResult", 1.5f);
         GetComponent<Text>().color = new Color(red, green, blue, alfa);
     }
 
