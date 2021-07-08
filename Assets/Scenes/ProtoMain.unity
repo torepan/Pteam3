@@ -672,7 +672,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1074088961}
-        m_MethodName: moveTyaba
+        m_MethodName: OnClickDo
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1122,7 +1122,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1074088961}
-        m_MethodName: moveTyaba
+        m_MethodName: OnClickDo
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1431,7 +1431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tyabasira_: {fileID: 433849987}
-  timeLimit: 10
+  timeLimit: 1000
   rankThreshold: 50000000460000003c00000032000000
 --- !u!114 &1074088960
 MonoBehaviour:
@@ -1579,7 +1579,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1074088961}
-        m_MethodName: moveTyaba
+        m_MethodName: OnClickDo
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2114,7 +2114,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1074088961}
-        m_MethodName: moveTyaba
+        m_MethodName: OnClickDo
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
