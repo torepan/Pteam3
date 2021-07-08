@@ -10,12 +10,21 @@ public class PlayerAction_Script : MonoBehaviour
     int nowPlace=0;
     public void OnClickDo(int n)
     {
-        if (Finfo_.canPush) return;//押せないなら終了
+        Debug.Log("OCD入力受付:"+n);
+        Debug.Log("Finfoのplace:"+ Finfo_.place);
+
+        if (!Finfo_.canPush)
+        {
+            Debug.Log("押せないので終了");
+            return;//押せないなら終了
+        }
 
         if (n != Finfo_.place)
         {
+            Debug.Log("Placeを変更する！");
             moveChar(n);
             nowPlace = Finfo_.place;
+            Debug.Log("nowPlace変更："+nowPlace);
         }
         if (n == Finfo_.place) moveTyaba(n);
     }
