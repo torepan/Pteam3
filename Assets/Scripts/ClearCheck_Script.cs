@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 /// <summary>
 /// 茶柱角度からクリアの判定
 /// タイマー機能
@@ -48,6 +49,8 @@ public class ClearCheck_Script: MonoBehaviour
                 break;
             }
         }
+        Debug.Log("ランクは"+rank);
+        SceneManager.LoadScene("yamkawa");
         return rank;
     }
 
