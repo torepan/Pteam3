@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/OsamoyaTestScene.unity
+    guid: b3e966d16c2dfe64a85e4505b0e57518
+  - enabled: 1
+    path: Assets/Scenes/yamakawa.unity
+    guid: 52e16bd8eed66624ca43eaa1cc120b43
   m_configObjects: {}
