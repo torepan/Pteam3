@@ -8,7 +8,11 @@ public class TyabasiraFailure_Script : MonoBehaviour
 {
     ClearCheck_Script ClearCheck_;
     [SerializeField] GameObject checkPoint;
-    
+
+    private void Start()
+    {
+        ClearCheck_ = GameObject.Find("Main Camera").GetComponent<ClearCheck_Script>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -17,6 +21,7 @@ public class TyabasiraFailure_Script : MonoBehaviour
         {
             Debug.Log("横になった！");
             ///
+            ClearCheck_.CallFail();
         }    
     }
 }
