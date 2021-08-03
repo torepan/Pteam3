@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 /// <summary>
-/// /// 子供のy座標を比較して、自分より下だったら終了を飛ばす
+/// 子供のy座標を比較して、自分より下だったら終了を飛ばす
 /// </summary>
 public class TyabasiraFailure_Script : MonoBehaviour
 {
@@ -10,13 +10,19 @@ public class TyabasiraFailure_Script : MonoBehaviour
     [SerializeField] GameObject checkPoint;
 
 
+    private void Start()
+    {
+        ClearCheck_ = GameObject.Find("Main Camera").GetComponent<ClearCheck_Script>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (checkPoint.transform.position.y < transform.position.y)
+        if (checkPoint.transform.position.y< transform.position.y)
         {
             Debug.Log("横になった！");
             ///
-        }
+            ClearCheck_.CallFail();
+        }    
     }
 }

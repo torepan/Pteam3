@@ -62,4 +62,9 @@ public class ClearCheck_Script: MonoBehaviour
         return (x > z) ? x : z;//大きいほうを返すのでよいのでは？
         //return -1;
     }
+    public void CallFail()
+    {
+        Debug.Log("失敗が呼ばれました");
+        SceneManager.LoadScene("yamkawa");
+    }
 }
