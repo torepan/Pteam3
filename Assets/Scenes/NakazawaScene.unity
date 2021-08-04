@@ -1206,8 +1206,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FinishText: {fileID: 1386293820}
-  ResultDammy: {fileID: 1458964198}
-  Tyabashira: {fileID: 1642190358}
   cam: {fileID: 344364347}
 --- !u!4 &1296112299
 Transform:
