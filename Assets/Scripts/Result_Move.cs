@@ -9,12 +9,14 @@ public class Result_Move : MonoBehaviour
 
     //text
     public GameObject FinishText;
-    public GameObject ResultDammy;
     //object
-    public GameObject Tyabashira;
     public GameObject cam;
+    //value
+   
 
-    
+
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,39 +27,36 @@ public class Result_Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //CamMove();
     }
 
     //ゲーム終了時に呼び出す関数
-    public void Result()
+    public void CamMove()
     {
-        
-        //茶柱の角度を求める
-
+        //終了テロップの表示
         FinishText.SetActive(true);
-        
-        //カメラ移動
+        //一定位置までカメラの移動
+        Vector3 camPos = cam.transform.position;
+        if (camPos.y <= 15)
+        {
+            camPos.y += 0.02f;
+            camPos.z -= 0.02f;
+            cam.transform.position = camPos;
+        }
+        else
+        {
+            //一定以上下がると停止、演出を流す
+            Debug.Log("CutIn");
+        }
+
+      
 
 
-        FairyRun();
-
-        //呼び出す演出の選択
-
-        Directing();
 
     }
 
-    //妖精が退散する関数
-    private void FairyRun()
-    {
-
-    }
-
-    //演出を呼び出す関数
-    private void Directing()
-    {
-        ResultDammy.SetActive(true);
-    }
+   
+   
 
  //--------デバッグ用-----------
 
