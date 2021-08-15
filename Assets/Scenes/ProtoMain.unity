@@ -1387,6 +1387,7 @@ GameObject:
   - component: {fileID: 989874941}
   - component: {fileID: 989874943}
   - component: {fileID: 989874942}
+  - component: {fileID: 989874944}
   m_Layer: 5
   m_Name: StaminaGage
   m_TagString: Untagged
@@ -1450,6 +1451,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989874940}
   m_CullTransparentMesh: 0
+--- !u!114 &989874944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989874940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0af84e185bb2bc40814ae245783385b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_: {fileID: 989874942}
+  FairyStamina_: {fileID: 1647875603}
 --- !u!1 &1074088955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2033,10 +2048,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7406cf28f1de3ba49aadd9a41dad074b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Max_f: 10
-  dif_f: 5
-  heal_f: 1
-  waitTime: 2
+  staminaUI_: {fileID: 989874944}
 --- !u!1 &1687732169
 GameObject:
   m_ObjectHideFlags: 0
