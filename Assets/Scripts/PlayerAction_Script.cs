@@ -7,13 +7,14 @@ public class PlayerAction_Script : MonoBehaviour
     [SerializeField] Tyabasira_Script Tyabasira_;
     [SerializeField] Fairyinformation_Script Finfo_;
     //[SerializeField] YOUSEI sousei;
+    [SerializeField] FairyStamina_Script Fstamina_;
     int nowPlace=0;
     public void OnClickDo(int n)
     {
         Debug.Log("OCD入力受付:"+n);
         Debug.Log("Finfoのplace:"+ Finfo_.place);
 
-        if (!Finfo_.canPush)
+        if (!Finfo_.canPush||!Fstamina_.haveEnergy)
         {
             Debug.Log("押せないので終了");
             return;//押せないなら終了
@@ -27,6 +28,8 @@ public class PlayerAction_Script : MonoBehaviour
             Debug.Log("nowPlace変更："+nowPlace);
         }
         if (n == Finfo_.place) moveTyaba(n);
+        Fstamina_.UseStamina();
+        Debug.Log("スタミナ消費");
     }
 
     void moveChar(int n)
