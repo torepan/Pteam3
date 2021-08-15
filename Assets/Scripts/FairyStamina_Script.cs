@@ -27,6 +27,7 @@ public class FairyStamina_Script : MonoBehaviour
     {
         NowStamina = Max_f;
         healTime = 0f;
+        haveEnergy = true;
     }
     // Update is called once per frame
     void Update()
