@@ -12,7 +12,7 @@ public class FairyStamina_Script : MonoBehaviour
 {
     [SerializeField] StaminaUI_Script staminaUI_;
     [SerializeField] public float Max_f { get; private set; } = 20;
-    [SerializeField] public float dif_f { get; private set; } = 10;
+    [SerializeField] public float dif_f { get; private set; } = 20;
     [SerializeField] public float heal_f { get; private set; } = 1;
     public float NowStamina { get; private set; }
     [SerializeField] public float waitTime { get; private set; } = 5;

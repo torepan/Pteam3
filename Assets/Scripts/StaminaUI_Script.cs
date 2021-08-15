@@ -18,6 +18,8 @@ public class StaminaUI_Script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        image_.DOColor(new Color(1.0f*94/255, 1.0f * 200 / 255, 1.0f * 72 / 255), 0f);
+        //image_.DOColor(new Color(0, 0, 0), 0f);
         stanTime_f = FairyStamina_.waitTime;
         staminaMax = FairyStamina_.Max_f;
     }
@@ -27,7 +29,7 @@ public class StaminaUI_Script : MonoBehaviour
     {
         if (FairyStamina_.haveEnergy)
         {
-            Debug.Log("現在の割合は："+FairyStamina_.NowStamina / staminaMax);
+            //Debug.Log("現在の割合は："+FairyStamina_.NowStamina / staminaMax);
             image_.DOFillAmount(FairyStamina_.NowStamina/staminaMax,0.1f);
         }
         else
@@ -41,7 +43,26 @@ public class StaminaUI_Script : MonoBehaviour
     /// </summary>
     public void stan(float s)
     {
-        image_.DOFillAmount(1f,s);
+        image_.DOFillAmount(0f, 0);//念のため0に
 
+        image_.color = Color.red;
+        /*
+        
+        image_.DOFillAmount(1f,s).SetDelay(0.1f);
+        image_.DOColor(new Color(94,200,72), 0f).SetDelay(s);//s秒後(処理後)に色を戻す
+        */
+        //image_.DOFade(0.2f,1f).SetLoops(3,LoopType.Yoyo);
+        //fillと同時には使えない(こっちが優先される)ので、別で対処する
+        //image_.DOFade(1, 0).SetDelay(s);
+        var sequence = DOTween.Sequence();
+        //つなげられるらしい
+        sequence
+            .Append(image_.DOFillAmount(1f, s))
+            //.Append(image_.DOFade(1, 0))
+            ;//.Append(image_.DOColor(new Color(94, 200, 72), 0f))
+        sequence.Join(image_.DOFade(0.2f, 1f).SetLoops(3, LoopType.Yoyo));
+        sequence.Append(image_.DOColor(new Color(1.0f * 94 / 255, 1.0f * 200 / 255, 1.0f * 72 / 255), 0f));//なんと0～1!
+        sequence.Play();
+        //image_.DOFillAmount(1f, s);
     }
 }
