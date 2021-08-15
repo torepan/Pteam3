@@ -34,17 +34,18 @@ public class FairyStamina_Script : MonoBehaviour
     {
         if (haveEnergy)
         {
-            NowStamina += heal_f;//0でなければ回復する
+            NowStamina += heal_f*Time.deltaTime;//0でなければ回復する
             NowStamina = (NowStamina < Max_f) ? NowStamina : Max_f;//最大値は超えない
         }
         else
         {
+            Debug.Log("回復中！");
             healTime += Time.deltaTime;
             if (healTime > waitTime)//数秒待って、
             {
+                Debug.Log("スタミナを回復！");
                 //スタミナを回復して変更する
-                haveEnergy = true;
-                NowStamina = Max_f;
+                SetStamina();
             }
         }
     }
@@ -54,8 +55,10 @@ public class FairyStamina_Script : MonoBehaviour
         if (haveEnergy)
         {
             NowStamina -= dif_f;
-            if (NowStamina < 0)
+            Debug.Log("消費後のスタミナは："+NowStamina);
+            if (NowStamina <= 0)
             {
+                Debug.Log("スタミナは0以下");
                 haveEnergy = false;
             }
         }
