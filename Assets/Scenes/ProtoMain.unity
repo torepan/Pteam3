@@ -1505,6 +1505,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tyabasira_: {fileID: 433849987}
   Finfo_: {fileID: 1074088960}
+  Fstamina_: {fileID: 1647875603}
 --- !u!1 &1258236973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1845,6 +1846,7 @@ GameObject:
   - component: {fileID: 1647875599}
   - component: {fileID: 1647875598}
   - component: {fileID: 1647875602}
+  - component: {fileID: 1647875603}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -1944,6 +1946,22 @@ MonoBehaviour:
   Place4: {fileID: 1618189671}
   Cube: {fileID: 1647875597}
   Finfo_: {fileID: 1074088960}
+--- !u!114 &1647875603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1647875597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7406cf28f1de3ba49aadd9a41dad074b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Max_f: 10
+  dif_f: 5
+  heal_f: 1
+  waitTime: 2
 --- !u!1 &1687732169
 GameObject:
   m_ObjectHideFlags: 0
