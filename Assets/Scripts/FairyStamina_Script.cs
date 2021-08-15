@@ -10,11 +10,11 @@ using UnityEngine;
 /// </summary>
 public class FairyStamina_Script : MonoBehaviour
 {
-    [SerializeField] float Max_f;
-    [SerializeField] float dif_f;//名前？
-    [SerializeField] float heal_f;
-    float NowStamina;
-    [SerializeField]float waitTime;
+    [SerializeField] public float Max_f { get; private set; }
+    [SerializeField] public float dif_f { get; private set; }//名前？
+    [SerializeField] public float heal_f { get; private set; }
+    public float NowStamina { get; private set; }
+    [SerializeField]public float waitTime { get; private set; }
     float healTime;
     public bool haveEnergy { get; private set; }
 
