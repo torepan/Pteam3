@@ -1958,8 +1958,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7406cf28f1de3ba49aadd9a41dad074b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Max_f: 100
-  dif_f: 10
+  Max_f: 10
+  dif_f: 5
   heal_f: 1
   waitTime: 2
 --- !u!1 &1687732169
