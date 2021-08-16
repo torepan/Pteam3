@@ -65,6 +65,6 @@ public class ClearCheck_Script: MonoBehaviour
     public void CallFail()
     {
         Debug.Log("失敗が呼ばれました");
-        SceneManager.LoadScene("yamkawa");
+        SceneManager.LoadScene("yamakawa");
     }
 }
